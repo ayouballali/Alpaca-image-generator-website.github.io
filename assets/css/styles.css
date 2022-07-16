@@ -1,10 +1,14 @@
 body {
-  background-color: rgb(183, 240, 240);
+  background-color: rgb(233, 236, 236);
 }
 
 .container {
   display: flex;
   height: 430;
+}
+
+.manipulation__section{
+  margin-left: 110px;
 }
 
 .image {
@@ -13,21 +17,51 @@ body {
 }
 
 .btn {
-  background-color: rgb(135, 135, 182);
-  height: 48px;
-  border-radius: 2px;
-  border: none;
+  
+  background-color: rgb(233, 236, 236);
+  border-radius: 25px;
+  padding: 11px 35px;
+  margin: 5px 8px;
+  border: 1px solid  rgb(151, 151, 228);
   cursor: pointer;
+  color:  rgb(151, 151, 228);;
 }
 
-.btn:hover {
+.btn-alt {
+  height: 48px;
+  padding: 15px 50px;
+  border-radius: 2px;
+  background-color: rgb(135, 135, 182);
+  border: none;
+  color: black;
+}
+
+.btn:hover{
   background-color: rgb(151, 151, 228);
+  color: aliceblue;
+}
+
+.btn-alt:hover {
+  
+  background-color: rgb(151, 151, 228);
+}
+/* stylling the right accessorize and style button */
+.accessorize__active,.btn__style__active{
+  background-color: rgb(151, 151, 228);
+  color: aliceblue;
 }
 
 .buttons {
   justify-content: space-between;
 }
-.btn-alt {
-  height: 48px;
-  padding: 15px 53px;
+/* hide all elements  */
+.style{
+  display: none;
 }
+/* display just the activated one  */
+.style__active{
+  display: contents;
+}
+
+
+

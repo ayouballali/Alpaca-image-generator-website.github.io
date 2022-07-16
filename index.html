@@ -1,52 +1,131 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Page Title</title>
-<link rel="stylesheet" href="assets/css/styles.css">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
 
-<div class="big__title">
-    <h1>ALPACA GENERATOR</h1>
-</div>
-
-<div class="container">
-    
-    <!-- the image  -->
-    <div class="image__section">
-      <div class="image">
-
-      </div>
-      <!-- the buttons section  -->
-      <div class="buttons">
-        <button class="btn btn-alt">Random</button>
-        <button class="btn btn-alt">Download</button>
-      </div>
+    <div class="big__title">
+        <h1>ALPACA GENERATOR</h1>
     </div>
 
-    <!-- manipulation buttons -->
-    <div class="manipulation__section">
-       
-        <!-- ACCESSORIZE div  -->
-        <div class="accessorize__div">
-            <h2>ACCESSORIZE THE ALPACA'S</h2>
-            <div class="accessorize__buttons__div">
-                <button class="btn">Hair</button>
-                <button class="btn">Ears</button>
-                <button class="btn">Eyes</button>
-                <button class="btn">Mouth</button>
-                <button class="btn">Neck</button>
-                <button class="btn">Leg</button>
-                <button class="btn">Accessories</button>
-                <button class="btn">Backgrounds</button>
-            </div>
+    <div class="container">
 
-            <div class="style__div">
-                <h2>STYLE</h2>
+        <!-- the image  -->
+        <div class="image__section">
+            <div class="image">
+
+            </div>
+            <!-- the buttons section  -->
+            <div class="buttons">
+                <button class="btn btn-alt">Random</button>
+                <button class="btn btn-alt">Download</button>
+            </div>
+        </div>
+
+        <!-- manipulation buttons -->
+        <div class="manipulation__section">
+
+            <!-- ACCESSORIZE div  -->
+            <div class="accessorize__div">
+                <h2>ACCESSORIZE THE ALPACA'S</h2>
+                <div class="accessorize__buttons__div">
+                    <button class="btn accessorize__btn  accessorize__active " id="style__hair">Hair</button>
+                    <button class="btn accessorize__btn " id="style__ears">Ears</button>
+                    <button class="btn accessorize__btn " id="style__eyes">Eyes</button>
+                    <button class="btn accessorize__btn " id="style__mouth">Mouth</button>
+                    <button class="btn accessorize__btn " id="style__neck">Neck</button>
+                    <button class="btn accessorize__btn " id="style__leg">Leg</button>
+                    <button class="btn accessorize__btn " id="style__accessories">Accessories</button>
+                    <button class="btn accessorize__btn " id="style__backgrounds">Backgrounds</button>
+                </div>
+
+                <div class="style__div">
+                    <h2>STYLE</h2>
+                    <div class="style style__hair style__active">
+                        <button class="btn style__button  btn__style__active">Default</button>
+                        <button class="btn style__button ">bang</button>
+                        <button class="btn style__button ">curls</button>
+                        <button class="btn style__button ">elegant</button>
+                        <button class="btn style__button ">fancy</button>
+                        <button class="btn style__button ">quiff</button>
+                        <button class="btn style__button ">short</button>
+                    </div>
+
+                    <div class="style style__ears">
+                        <button class="btn style__button  btn__style__active">Default</button>
+                        <button class="btn style__button ">tilt-backward</button>
+                        <button class="btn style__button ">tilt-forward</button>
+                    </div>
+
+                    <div class="style style__eyes">
+                        <button class="btn style__button  btn__style__active">Default</button>
+                        <button class="btn style__button ">angry</button>
+                        <button class="btn style__button ">naughty</button>
+                        <button class="btn style__button ">panda</button>
+                        <button class="btn style__button ">smart</button>
+                        <button class="btn style__button ">start</button>
+                    </div>
+
+                    <div class="style style__mouth">
+                        <button class="btn style__button  btn__style__active">Default</button>
+                        <button class="btn style__button ">astonished</button>
+                        <button class="btn style__button ">eating</button>
+                        <button class="btn style__button ">laugh</button>
+                        <button class="btn style__button ">tongue</button>
+
+                    </div>
+
+                    <div class="style style__neck">
+                        <button class="btn style__button  btn__style__active">Default</button>
+                        <button class="btn style__button ">bend-backward</button>
+                        <button class="btn style__button ">bend-forkward</button>
+                        <button class="btn style__button ">thick</button>
+
+                    </div>
+
+                    <div class="style style__leg">
+                        <button class="btn style__button  btn__style__active">Default</button>
+                        <button class="btn style__button ">bubble-tea</button>
+                        <button class="btn style__button ">cookie</button>
+                        <button class="btn style__button ">game-console</button>
+                        <button class="btn style__button ">tilt-backward</button>
+                        <button class="btn style__button ">tilt-forward</button>
+                    </div>
+
+                    <div class="style style__accessories">
+                        <button class="btn style__button  btn__style__active">earings</button>
+                        <button class="btn style__button ">flower</button>
+                        <button class="btn style__button ">glasses</button>
+                        <button class="btn style__button ">headphone</button>
+
+                    </div>
+
+                    <div class="style style__backgrounds">
+                        <button class="btn style__button  btn__style__active">blue50</button>
+                        <button class="btn style__button ">blue60</button>
+                        <button class="btn style__button ">fancy</button>
+                        <button class="btn style__button ">darkblue30</button>
+                        <button class="btn style__button ">darkblue50</button>
+                        <button class="btn style__button ">darkblue70</button>
+                        <button class="btn style__button ">green50</button>
+                        <button class="btn style__button ">green60</button>
+                        <button class="btn style__button ">green70</button>
+                        <button class="btn style__button ">grey40</button>
+                        <button class="btn style__button ">grey70</button>
+                        <button class="btn style__button ">grey80</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
+
+
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

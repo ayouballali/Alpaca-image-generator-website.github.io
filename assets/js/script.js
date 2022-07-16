@@ -22,7 +22,7 @@ accessorize__buttons.forEach((btn)=>{
         })
     })
 })
-
+ 
 /*==================styling the style buttons========================= */
 const style__buttons = document.querySelectorAll('.style__button');
 

@@ -37,6 +37,11 @@ style__buttons.forEach((btn)=>{
                         btn1.classList.remove('btn__style__active');
         })
         /* ==============showing the styles in the image ==========*/ 
-           
+           /*which accessoires */
+           let accessoire = btn.parentElement.classList[0];
+           let imagetrigred = document.getElementById(accessoire)
+
+           imagetrigred.setAttribute("src","assets/img/"+accessoire+"/"+btn.innerHTML+".png") ;
+      
     })
 })

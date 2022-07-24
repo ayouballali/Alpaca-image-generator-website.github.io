@@ -65,4 +65,14 @@ body {
 }
 
 
+/*=======================image section ==============*/
+
+.image{
+  background-color: red;
+}
+
+.img{
+  width: 350px;
+  height: 410px;
+}
 

@@ -1,3 +1,5 @@
+import domtoimage from 'dom-to-image';
+
 /* ------------- show the convenable style buttons--------------  */
 const accessorize__buttons = document.querySelectorAll(".accessorize__btn"),
   styles = document.querySelectorAll(".style");
@@ -59,23 +61,32 @@ let haires = document.querySelectorAll(".hair")[0].children;
 let eyes = document.querySelector(".eyes").children;
 let ears = document.querySelector(".ears").children;
 let legs = document.querySelector(".leg").children;
-let accessoires =
-  document.querySelector(".accessories").children;
-let backgrounds =
-  document.querySelector(".backgrounds").children;
+let accessoires = document.querySelector(".accessories").children;
+let backgrounds = document.querySelector(".backgrounds").children;
 let mouth = document.querySelector(".mouth").children;
 let neck = document.querySelector(".neck").children;
 
 randomButton.addEventListener("click", () => {
-  putThisImage(haires[Math.floor(Math.random() * haires.length)].innerHTML,"hair");
-  putThisImage(eyes[Math.floor(Math.random() * eyes.length)].innerHTML,"eyes");
-  putThisImage(ears[Math.floor(Math.random() * ears.length)].innerHTML,"ears");
-  putThisImage(legs[Math.floor(Math.random() * legs.length)].innerHTML,"leg");
-  putThisImage(accessoires[Math.floor(Math.random() * accessoires.length)].innerHTML,"accessories");
-  putThisImage(backgrounds[Math.floor(Math.random() * backgrounds.length)].innerHTML,"backgrounds");
-  putThisImage(mouth[Math.floor(Math.random() * mouth.length)].innerHTML,"mouth");
-  putThisImage(neck[Math.floor(Math.random() * neck.length)].innerHTML,"neck");
-  
+  putThisImage(
+    haires[Math.floor(Math.random() * haires.length)].innerHTML,
+    "hair"
+  );
+  putThisImage(eyes[Math.floor(Math.random() * eyes.length)].innerHTML, "eyes");
+  putThisImage(ears[Math.floor(Math.random() * ears.length)].innerHTML, "ears");
+  putThisImage(legs[Math.floor(Math.random() * legs.length)].innerHTML, "leg");
+  putThisImage(
+    accessoires[Math.floor(Math.random() * accessoires.length)].innerHTML,
+    "accessories"
+  );
+  putThisImage(
+    backgrounds[Math.floor(Math.random() * backgrounds.length)].innerHTML,
+    "backgrounds"
+  );
+  putThisImage(
+    mouth[Math.floor(Math.random() * mouth.length)].innerHTML,
+    "mouth"
+  );
+  putThisImage(neck[Math.floor(Math.random() * neck.length)].innerHTML, "neck");
 });
 
 /*================== function that get a value than put the convenant image and make it active    ========================= */
@@ -96,3 +107,20 @@ function putThisImage(element, accessoire) {
     }
   });
 }
+
+/* ====================downlaoding the image ==========================*/
+// let downloadButton = document.getElementById("download");
+// var node = document.getElementById("image");
+
+// downloadButton.addEventListener("click", () => {
+//   htmlToImage
+//     .toPng(node)
+//     .then(function (dataUrl) {
+//       var img = new Image();
+//       img.src = dataUrl;
+//       document.body.appendChild(img);
+//     })
+//     .catch(function (error) {
+//       console.error("oops, something went wrong!", error);
+//     });
+// });

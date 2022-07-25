@@ -55,19 +55,27 @@ style__buttons.forEach((btn) => {
 
 let randomButton = document.getElementById("random");
 
-let haires = document.querySelectorAll(".hair").childElement.contttent;
-let eyes = document.querySelectorAll(".eyes").childElement.innerHTML;
-let ears = document.querySelectorAll(".ears").childElement.innerHTML;
-let legs = document.querySelectorAll(".legs").childElementinnerHTML;
+let haires = document.querySelectorAll(".hair")[0].children;
+let eyes = document.querySelector(".eyes").children;
+let ears = document.querySelector(".ears").children;
+let legs = document.querySelector(".leg").children;
 let accessoires =
-  document.querySelectorAll(".accessoires").childElement.innerHTML;
+  document.querySelector(".accessories").children;
 let backgrounds =
-  document.querySelectorAll(".backgrounds").childElement.innerHTML;
-let mouth = document.querySelectorAll(".mouth").childElement.innerHTML;
+  document.querySelector(".backgrounds").children;
+let mouth = document.querySelector(".mouth").children;
+let neck = document.querySelector(".neck").children;
 
 randomButton.addEventListener("click", () => {
-  haires.random();
-  eyes.random();
+  putThisImage(haires[Math.floor(Math.random() * haires.length)].innerHTML,"hair");
+  putThisImage(eyes[Math.floor(Math.random() * eyes.length)].innerHTML,"eyes");
+  putThisImage(ears[Math.floor(Math.random() * ears.length)].innerHTML,"ears");
+  putThisImage(legs[Math.floor(Math.random() * legs.length)].innerHTML,"leg");
+  putThisImage(accessoires[Math.floor(Math.random() * accessoires.length)].innerHTML,"accessories");
+  putThisImage(backgrounds[Math.floor(Math.random() * backgrounds.length)].innerHTML,"backgrounds");
+  putThisImage(mouth[Math.floor(Math.random() * mouth.length)].innerHTML,"mouth");
+  putThisImage(neck[Math.floor(Math.random() * neck.length)].innerHTML,"neck");
+  
 });
 
 /*================== function that get a value than put the convenant image and make it active    ========================= */
@@ -75,7 +83,7 @@ randomButton.addEventListener("click", () => {
 function putThisImage(element, accessoire) {
   let imagetrigredElemt = document.getElementById(accessoire);
 
-  imagetrigred.setAttribute(
+  imagetrigredElemt.setAttribute(
     "src",
     "assets/img/" + accessoire + "/" + element + ".png"
   );

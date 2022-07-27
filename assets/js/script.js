@@ -1,4 +1,9 @@
-import domtoimage from 'dom-to-image';
+// import domtoimage from 'dom-to-image';
+
+
+/*  testing here converting elemnts to images  */
+
+
 
 /* ------------- show the convenable style buttons--------------  */
 const accessorize__buttons = document.querySelectorAll(".accessorize__btn"),
@@ -109,18 +114,31 @@ function putThisImage(element, accessoire) {
 }
 
 /* ====================downlaoding the image ==========================*/
-// let downloadButton = document.getElementById("download");
-// var node = document.getElementById("image");
+let downloadButton = document.getElementById("download");
+let _alpacaDiv = document.querySelector(".image");
+downloadButton.addEventListener("click", downloadAlpaca);
 
-// downloadButton.addEventListener("click", () => {
-//   htmlToImage
-//     .toPng(node)
-//     .then(function (dataUrl) {
-//       var img = new Image();
-//       img.src = dataUrl;
-//       document.body.appendChild(img);
-//     })
-//     .catch(function (error) {
-//       console.error("oops, something went wrong!", error);
-//     });
-// });
+
+
+
+
+
+
+
+function downloadAlpaca() {
+  html2canvas(_alpacaDiv, {height: _alpacaDiv.clientHeight - 10}).then(function (canvas) {
+    const imageFromDiv = canvas.toDataURL("image/png");
+    downloadURI("data:" + imageFromDiv, "alpaca.png");
+  });
+}
+
+function downloadURI(uri, name) {
+  var link = document.createElement("a");
+
+  link.download = name;
+  link.href = uri;
+  document.body.appendChild(link);
+  link.click();
+  //after creating link you should delete dynamic link
+  //clearDynamicLink(link);
+}

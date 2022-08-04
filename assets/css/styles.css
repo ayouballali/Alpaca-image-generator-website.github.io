@@ -4,7 +4,9 @@ body {
 
 .container {
   display: flex;
-  height: 430;
+  height: 430px;
+  width: 80%;
+  margin:  auto;
 }
 
 .manipulation__section{
@@ -25,7 +27,8 @@ body {
   margin: 5px 8px;
   border: 1px solid  rgb(151, 151, 228);
   cursor: pointer;
-  color:  rgb(151, 151, 228);;
+  color:  rgb(151, 151, 228);
+  
 }
 
 .btn-alt {
@@ -64,6 +67,9 @@ body {
   display: contents;
 }
 
+.accessorize__buttons__div{
+  width: 400px;
+}
 
 /*=======================image section ==============*/
 
@@ -74,3 +80,24 @@ body {
   height: 410px;
 }
 
+
+
+@media screen and (max-width: 992px) {
+ 
+  .container{
+    display:block;
+
+  }
+
+  .accessorize__div{
+    display: flex;
+  }
+
+  .accessorize__buttons__div{
+    width: 400px;
+  }
+  .manipulation__section {
+    margin-left: 110px;
+    width: 400px;
+}
+}

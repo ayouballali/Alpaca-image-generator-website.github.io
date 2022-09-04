@@ -1,5 +1,8 @@
 body {
   background-color: rgb(233, 236, 236);
+  
+  font-family: 'Times New Roman', serif;
+
 }
 
 .container {
@@ -7,6 +10,13 @@ body {
   height: 430px;
   width: 80%;
   margin:  auto;
+}
+
+h1{
+  margin: auto;
+    width: 50%;
+    margin-bottom: 70px;
+    text-align: center;
 }
 
 .manipulation__section{
